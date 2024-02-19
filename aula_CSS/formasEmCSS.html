@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula css</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-family: Arial;
+        }
+        .cubo{
+            color: aqua;
+        }
+        
+        .btn-hover{
+            position:relative;
+            border:none;
+            padding: 20px;
+            color: black;
+            background-color: darkgrey;
+            z-index: 1;
+        }
+        .quadrado{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+        .bigsquare{
+            width: 150px;
+            height: 100px;
+            background-color: black;
+        }
+        .bola{
+        width: 100px;
+	    height: 100px;
+	    border-radius: 50%;
+	    overflow: hidden;
+	    float: left;
+	    margin: 15px;
+        background-color: blue;
+        }
+
+        .cubolegal{
+            width: 100px;
+            height: 100px;
+            border-radius: 40% 40% 40% 40% ;
+            background-color: rgb(28, 55, 131);
+        }
+        
+        .triangulo{
+            width: 0; 
+            height: 0; 
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 100px solid #fa00a7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>butao:</p>
+    <button class="btn-hover">button:hover</button>
+
+    <hr>
+
+    <h1>Quadrado:</h1>
+    <h3 class="cubo">quadrado: cubo 2d</h3>
+    <p><strong>width: </strong>define a largura</p>
+    <p><strong>height: </strong>define a altura</p>
+    <div class="quadrado"></div>
+    <h3>agora um quadrado bonito:</h3>
+    <div class="cubolegal"></div>
+
+    <hr>
+
+    <h2>agora um retangulo:</h2>
+    <div class="bigsquare"></div>
+    <p>massa</p>
+
+    <hr>
+
+    <h1>Circulo:</h1>
+    <p>para definir um ciruculo usamos <strong>border-radius</strong> do elemento</p>
+    <p>isso criara campos curvados no elemento</p>
+    <p>se definirmos <strong>50%</strong> criamos um circulo</p>
+
+    <div class="bola"></div>
+    <br>
+    <p>bola</p>
+    <br><br><br>
+
+    <hr>
+
+    <h1>triangulo:</h1>
+
+    <p>triangulo e um pouco mais complicado</p>
+    <p>temos que definir bordas do elemento, o width real do elemento sera a borda</p>
+    <p>lembre-se que os cantos das bordas de um elemtnto são diagonaisde 45 graus</p>
+    <br>
+    <p>triangulo</p>
+    <div class="triangulo"></div>
+
+    <hr>
+
+    <p>insira texto:</p>
+    <input type="text">
+
+
+
+</body>
+</html>
