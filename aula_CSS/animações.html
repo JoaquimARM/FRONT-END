@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+        body{
+            display: flex; /*usa o flexbos para centralizar o conteudo*/
+             /*centralizar  horizontalmente*/
+            align-items: center; /*centralizar verticalmente*/
+            min-height: 100vh; /*altura minima da pagina é 100% da viewport*/
+            background-color: rgb(73, 228, 255);
+        }
+        
+        .carro{
+            position: relative;
+            animation: moverCarro 7s linear infinite;
+        }
+        .corpo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 175px;
+            height: 100px;
+            background-color: rgb(199, 21, 21);
+            border-radius: px;
+        }
+        .roda{
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 3%;
+            background-color: rgb(0, 0, 0);
+            animation: girarRoda 0.5s linear infinite;
+        }
+
+        #r1{
+            left: 5px;
+        }
+
+        #r2{
+            right: 5px;
+        }
+        #teste{
+            width: 400px;
+            height: 120px;
+            background-color: rgb(194, 29, 29);
+        }
+
+        .janela{
+            width: 100px;
+            height: 70px;
+            background-color: rgb(47, 115, 170);
+        }
+
+        @keyframes moverCarro{ /*inicia a definição da animação mover carro*/
+            0%{/*inicio da animação*/
+                transform: translateX(0);/*inicia o movimento*/
+            }
+            50%{
+                transform: translateX(100vw);
+            }
+            100%{
+                transform: translateX(0);/*move o carro para a direita*/
+            }
+  
+        }
+
+        @keyframes girarRoda{
+            from{
+                transform: rotate(0);
+            } to {
+                transform: rotate(360deg);
+            }
+
+        }
+        .roda2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 3%;
+            background-color: rgb(136, 132, 132);
+        }
+
+        .roda3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 3%;
+            background-color: rgb(136, 132, 132);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carro">
+
+        <div class="corpo">
+            <div class="janela"></div>
+        </div>
+
+        <div id="teste"></div>
+
+        <div class="roda" id="r1">
+            <div class="roda2"></div>
+        </div>
+        <div class="roda" id="r2">
+            <div class="roda3"></div>
+        </div> 
+    </div>
+</body>
+</html>

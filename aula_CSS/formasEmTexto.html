@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forma em texto</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-family:Arial;
+        }
+
+        .cubao2d{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background:cadetblue;
+            shape-outside: inset(10px 0px 10px 30px);/*10px na parte superior | 5px a direita | 30px na parte inferior | 10px a esquerda*/
+        }
+
+        .bola{
+            float: left;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            shape-outside: circle();
+            clip-path:circle();
+        }
+
+        .meiabola{
+            float: left;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            shape-outside: circle(50% at 50%);
+            clip-path:circle(50% at 0);
+            background: yellowgreen;
+        }
+
+        .meiabola2{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin:6px ;
+            shape-outside: circle(50% at 50%);
+            clip-path:circle(50% at 0);
+            background: rgb(96, 126, 37);
+        }
+
+        @keyframes arcoiris {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            75%  {background-color: pink;}
+            100% {background-color: green;}
+
+
+        }
+
+        /* The element to apply the animation to */
+        div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: arcoiris 1.5s linear infinite;
+
+        }
+
+        .elipse{
+            float:left;
+            width:150px ;
+            height:150px ;
+            margin:20px ;
+            shape-outside:ellipse(20% 50%);
+            clip-path: ellipse(20% 50%);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: cadetblue;">shaped-outside</h1>
+    <p>
+        esta propriedade permite que voce defina uma forna para que o texto se envolva
+        e flua ao seu redor
+    </p>
+    <p>junto a esta propriedade temos algumas formas basicas</p>
+
+    <p>o elemento que vamos aplicar a forma com a propriedade <strong>shaped-outside</strong> precisa ter a propriedade <strong>float</strong></p>
+    
+    <ul>
+        <li>
+            inset()
+        </li>
+
+        <li>
+            circle()
+        </li>
+
+        <li>
+            ellipse()
+        </li>
+
+        <li>
+            polygon()
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2 style="color: cadetblue;">função inset()</h2>
+
+    <p>
+        pode ser usado para criar um retangulo ou quadrado
+        com um deslocamento opcional para o texto que o envolver
+    </p>
+
+    <p>observe:</p>
+
+    <div class="cubao2d"></div>
+    I'm Slim Shady, yes, I'm the real Shady. All you other Slim Shadys are just imitating. So won't the real Slim Shady please stand up. Please stand up, please stand up?. 
+    'Cause I'm Slim Shady, yes, I'm the real Shady. All you other Slim Shadys are just imitating. So won't the real Slim Shady please stand up. Please stand up, please stand up?
+    I'm not afraid to take a stand. Everybody, come take my hand. We'll walk this road together, through the storm. Whatever weather, cold or warm. Just lettin' you know that you're not alone.
+    Holla if you feel like you've been down the same road.And I am whatever you say I am. If I wasn't, then why would I say I am?. In the paper, the news, every day I am. Radio won't even play my jam.
+    ‘Cause I am whatever you say I am. If I wasn't, then why would I say I am?. In the paper, the news, every day I am. I don't know, it's just the way I am.
+    Feminist women love Eminem. "Chicka, chicka, chicka, Slim Shady, I'm sick of him. Look at him, walkin' around, grabbin' his you-know-what. Flippin' the you-know-who," "Yeah, but he's so cute though.
+    ". Yeah, I probably got a couple of screws up in my head loose. But no worse than what's goin' on in your parents' bedrooms.
+    So bad, I’m so good that I’m so bad. Guarantee I’ll be the greatest thing you ever had. ‘Cause you ain't never met nobody like me. And you ain't gonna wanna fuck nobody else again. I'ma make you learn to appreciate me, differentiate me. From these phony, little fishy and sissy fake G’s. Skip over the "huggy bear," and all the "kissy face," please.
+
+    <br>
+    <br>
+    <hr>
+
+    <h2 style="color: cadetblue;">função Circle()</h2>
+
+    <p>pode ser aplicando um <strong>clip-path</strong> com a propriedade correspondente para que o circulo apareça</p>
+    <p>o circulo e criado usando a propriedade <strong>shape-outside</strong></p>
+    <p>a propriedade <strong>clip-path</strong> pode receber a mesma propriedade <strong>shape-outside</strong> para dar a ela a forma padrão de <strong>circle()</strong></p>
+
+    <div class="bola"></div>
+    I was gonna take the time to sit down and write you a little letter. But I thought a song would probably be a little better. Instead of a ,letter. That you'd probably just shred up--yeah. I stumbled on your picture yesterday and it made me stop and think of. How much of a waste it'd ,be for me to put some ink to, a stupid piece a. Paper, I'd rather let you see how. Much I fucking hate you in a freestyle.Feminist women love Eminem. "Chicka, chicka, chicka, Slim Shady, I'm sick of him. Look at him, walkin' around, grabbin' his you-know-what. Flippin' the you-know-who," "Yeah, but he's so cute though.". Yeah, I probably got a couple of screws up in my head loose. But no worse than what's goin' on in your parents' bedrooms.And I am whatever you say I am. If I wasn't, then why would I say I am?. In the paper, the news, every day I am. Radio won't even play my jam. ‘Cause I am whatever you say I am. If I wasn't, then why would I say I am?. In the paper, the news, every day I am. I don't know, it's just the way I am.We're gonna rock this house until we knock it down. So turn the volume loud. 'Cause it's mayhem 'til the A.M.. So, baby, make just like K-Fed. And let yourself go, let yourself go. Say "Fuck it!" before we kick the bucket. Life's too short to not go for broke. So everybody, everybody, go berserk, grab your vial, yeah.
+    Mom, I know I let you down. And though you say the days are happy. Why is the power off and I'm fucked up?. And, Mom, I know he's not around. But don't you place the blame on me. As you pour yourself another drink, yeah. I guess we are who we are. Headlights shining in the dark night, I drive on. Maybe we took this too far.When you walked through the door. It was clear to me (Clear to me). You’re the one they adore. Who they came to see (Who they came to see). You’re a rock star (Baby). Everybody wants you (Everybody wants you). Player, who can really blame you? (Who can really blame you?). We’re the ones who made you.The way she moves, she's like a belly-dancer. She's shaking that ass to the new Nelly jams. I think someone's at the door but I don't think I'mma answer. Police saying 'freeze!': do-doing, doing, doing. What do you mean, 'freeze'? Please, I'm a human being!. I have needs! I'm NOT done, not 'til I'm finished peeing.
+    <br><br><br><br>
+    <hr>
+
+    <p>folha</p>
+    <div class="meiabola"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+
+    <p>meiabola</p>
+    <div class="meiabola2"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+
+    <h2 style="color: cadetblue;">eclipse()</h2>
+    <p>funcionam da mesma forma que os circulos, exceto pelo fato de criar uma oval</p>
+    <p>pode definir valores x e y assim <strong>ellipse(25px 50px)</strong></p>
+    <div class="elipse"></div>
+    We're gonna rock this house until we knock it down. So turn the volume loud. 'Cause it's mayhem 'til the A.M.. So, baby, make just like K-Fed. And let yourself go, let yourself go. Say "Fuck it!" before we kick the bucket. Life's too short to not go for broke. So everybody, everybody, go berserk, grab your vial, yeah.My tea's gone cold. I'm wondering why I got out of bed at all. The morning rain clouds up my window. And I can't see at all. And even if I could it'd all be gray. But your picture on my wall. It reminds me that it's not so bad, it's not so bad.I'm beginning to feel like a Rap God, Rap God. All my people from the front to the back nod, back nod. Now who thinks their arms are long enough to slap box, slap box?. Let me show you maintaining this shit ain't that hard, that hard. Everybody want the key and the secret. To rap immortality like I have got.Will the real Slim Shady please stand up?. I repeat, will the real Slim Shady please stand up?. We're gonna have a problem here. Y'all act like you never seen a white person before. Jaws all on the floor like Pam like Tommy just burst in the door. And started whoopin' her ass worse than before.So bad, I’m so good that I’m so bad. Guarantee I’ll be the greatest thing you ever had. ‘Cause you ain't never met nobody like me. And you ain't gonna wanna fuck nobody else again. I'ma make you learn to appreciate me, differentiate me. From these phony, little fishy and sissy fake G’s. Skip over the "huggy bear," and all the "kissy face," please.Mom, I know I let you down. And though you say the days are happy. Why is the power off and I'm fucked up?. And, Mom, I know he's not around. But don't you place the blame on me. As you pour yourself another drink, yeah. I guess we are who we are. Headlights shining in the dark night, I drive on. Maybe we took this too far.
+    I'm Slim Shady, yes, I'm the real Shady. All you other Slim Shadys are just imitating. So won't the real Slim Shady please stand up. Please stand up, please stand up?. 'Cause I'm Slim Shady, yes, I'm the real Shady. All you other Slim Shadys are just imitating. So won't the real Slim Shady please stand up. Please stand up, please stand up?If you could count the skeletons in my closet. Under my bed and up under my faucet. Then you would know I've completely lost it. Is he nuts? No, he's insane. If you could count the skeletons in my closet. Under my bed and up under my faucet. Then you would know I've completely lost it. Is he nuts? No, he's insane.
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <hr>
+
+    
+
+
+</body>
+</html>
