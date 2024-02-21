@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coração</title>
+  <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100vh;
+      }
+
+      body {
+        background-color: pink;
+        font-family: 'Miriam Libre', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      section{
+        height: 150px;
+        width: 200px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .heart_beating {
+        position: relative;
+      }
+
+      .heart {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: red;
+        transform: rotate(45deg);
+        animation: beat 2s ease-out infinite;
+      }
+
+      .heart::before, .heart::after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+      }
+
+      .heart::before {
+        top: -25px;
+      }
+
+      .heart::after {
+        left: -25px;
+      }
+
+      .shine {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 25px;
+        bottom: 48px;
+        border-radius: 100% 0%;
+        border-left: 2px solid #FFEAA5;
+        transform: rotate(90deg);
+      }
+
+      .shadow {  
+        width: 70px;
+        height: 20px;
+        background: #4A676A;
+        opacity: .2;
+        border-radius: 100%;
+        position: absolute;
+        bottom: -50px;
+        right: -10px;
+        animation: beat_shadow 2s ease-out infinite;
+      }
+
+      @keyframes beat {
+        0%, 40%, 70%, 100%{
+          transform: scale(1) rotate(45deg);
+        }
+        20%{
+          transform: scale(1.4) rotate(45deg);
+        }
+        50%, 80% {
+          transform: scale(1.2) rotate(45deg);
+        }
+      }
+
+      @keyframes beat_shadow {
+        0%, 40%, 70%, 100%{
+          transform: scale(1);
+        }
+        20%  {
+          transform: scale(1.4);
+        }
+        50%, 80% {
+          transform: scale(1.2);
+        }
+      }
+
+      /*-----------------------*/
+      #by {
+        font-family: 'Arima Madurai', cursive;
+        color: #4A676A;
+        font-size: 10px;
+        transform: rotate(-45deg);
+        position: relative;
+        left: 22%;
+        bottom: 15%;
+      }
+
+/*
+light-blue: #C1D0D0;
+dark-blue: #4A676A;
+cream: #FFEAA5;
+yellow: #FFB037;
+*/
+  </style>
+</head>
+<body>
+  <section>
+    <div class="heart_beating">
+      <div class="heart">
+        <span class="shine"></span>
+      </div>
+      <span class="shadow"></span>
+    </div>
+    <span id="by">&Joaquim Machado</span>
+  </section>
+</body>
+</html>

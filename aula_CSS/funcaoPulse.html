@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mais animações</title>
+
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: Arial;
+        }
+       .bola{
+            position: absolute;
+            top: 43.1%;
+            left: 43.1%;
+            transform: translate(-50%, -50%);
+            width: 200px ;
+            height:200px;
+            border-radius: 50% ;
+            background-color: chocolate;
+            animation: pulse 5s infinite
+       } 
+
+       hr{
+        border-color: black;
+       }
+
+       @keyframes pulse{
+            0%{
+                transform: scale(1);
+                border-radius: 0%;
+            }
+            50%{
+                transform: scale(1.1);
+                border-radius: 50%;
+            }
+            100%{
+                transform: scale(1);
+                border-radius: 0%;
+            }
+       }
+    </style>
+
+</head>
+<body>
+
+    <h1 style="color: brown;">função pulse</h1>
+    <p>
+        criando um circulo que pulse continuamente
+    </p>
+    <div class="bola"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+
+</body>
+
+</html>

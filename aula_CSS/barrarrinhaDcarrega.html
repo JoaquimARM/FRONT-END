@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>barrinha de carrega</title>
+    <style>
+        body{
+            display: flex;
+            background-color: cadetblue;
+            font-family: Arial;
+        }
+        .baguidecarrega{
+            position: absolute;
+            top: 45%;
+            border: 16px solid ;
+            left: 45%;
+            height: 100px ;
+            width: 100px ;
+            border-top: 16px solid rgb(29, 156, 71);
+            background-color: darkslategray;
+            border-radius: 50%;
+            animation: baguidcarrega 2s linear infinite;
+        }
+
+        @keyframes baguidcarrega{
+            from{transform: rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: darkslategrey;">barrinha de carrega:</h1>
+    <div class="baguidecarrega">
+    </div>
+
+</body>
+</html>

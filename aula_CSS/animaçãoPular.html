@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animação pular</title>
+
+    <style>
+        body{
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            min-height: 100vh;
+        }
+
+        .caixaqpula{
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: coral;
+            animation: saltar 0.5s infinite;
+        }
+
+        @keyframes saltar{
+
+            0%,100%{ top: 0;}
+            50%{top: -90px;}
+        }
+    </style>
+
+</head>
+<body>
+    <div class="caixaqpula"></div>
+</body>
+</html>
