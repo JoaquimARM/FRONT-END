@@ -18,9 +18,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: top;
-    max-width:400px;
+    max-width:350px;
     margin: 50px auto;
-    height: 230px;
+    height: 330px;
     background-color: rgb(144, 150, 150);
     border-radius: 20px;
 
@@ -55,4 +55,9 @@ form input{
   margin-bottom: 10px;
   border-radius: 5px;
   
+}
+
+#resultado{
+    margin: 20px;
+    
 }
