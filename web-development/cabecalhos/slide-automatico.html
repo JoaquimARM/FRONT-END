@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide automatico</title>
+    <style>
+        .meuSlide{
+            width: 100%;
+        }        
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./1.jpg" alt="" class="meuSlide">
+        <img src="./2.jpg" alt="" class="meuSlide">
+        <img src="./3.jpg" alt="" class="meuSlide">
+    </div>
+    <script>
+        var slideindex = 0;
+        carrossel()
+        function carrossel(){
+
+            var x = document.getElementsByClassName("meuSlide");
+
+            for (var i = 0; i < x.length; i++){
+                x[i].style.display = "none";
+            }
+            slideindex++;
+            if(slideindex > x.length){
+                slideindex = 1;
+            }
+            x[slideindex-1].style.display = "block";
+            setTimeout(carrossel,2000);
+            console.log(x)
+        }
+    </script>
+</body>
+</html>
