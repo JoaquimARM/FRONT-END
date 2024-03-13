@@ -12,6 +12,20 @@ function carregarImagem(){
 
 }
 
+function clicarimagem(){
+    const imagemminiatura = document.querySelectorAll('#galeria img');
+    imagemminiatura.forEach(imagemminiatura =>{
+        imagemminiatura.addEventListener('click',function(){
+            const imagemgrande = document.createElement('img');
+            imagemgrande.src = this.src;
+            imagemgrande.classList.add('imagemgrande');
+            document.getElementById('imagem-grande-container').innerHTML='';
+            document.getElementById('imagem-grande-container').appendChild(imagemgrande)
+        })
+    })
+
+}
+
 
 
 document.getElementById('arquivos').addEventListener('change', function(event){
@@ -22,6 +36,7 @@ document.getElementById('arquivos').addEventListener('change', function(event){
         const imgURL = e.target.result;
         images.push(imgURL);
         carregarImagem();
+        clicarimagem();
     };
 
     
